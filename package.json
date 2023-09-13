@@ -1,0 +1,22 @@
+{
+  "name": "restructured",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Marcus Faria <mfaria150.github@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
+}
