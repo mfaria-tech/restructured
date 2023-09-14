@@ -1,0 +1,53 @@
+/* ================ */
+/*      GLOBAL      */
+/* ================ */
+
+:root {
+  /* COLORS */
+  --color-primary: ;
+  --color-secondary: ;
+  --color-tertiary: ;
+
+  --color-neutral-0: #f8f9fa;
+  --color-neutral-1: #e9ecef;
+  --color-neutral-2: #dee2e6;
+  --color-neutral-3: #ced4da;
+  --color-neutral-4: #adb5bd;
+  --color-neutral-5: #6c757d;
+  --color-neutral-6: #495057;
+  --color-neutral-7: #343a40;
+  --color-neutral-8: #212529;
+
+  --color-header: var(--color-neutral-7);
+  --color-body: var(--color-neutral-3);
+  --color-sidebar: var(--color-neutral-5);
+  --color-footer: var(--color-neutral-7);
+
+  /* SIZE */
+  --space-xs: 6px;
+  --space-s: 9px;
+  --space-base: 15px;
+
+  --font-size-s: 12px;
+  --font-size-base: 15px;
+
+  --header-height: 72px;
+  --header-width: 100vw;
+  
+  --footer-height: 45px;
+  --footer-width: 100vw;
+
+  --sidebar-height: calc(100vh - var(--header-height) - var(--footer-height));
+  --sidebar-width: 72px;
+
+  --main-height: var(--sidebar-height);
+  --main-width: calc(100vw - var(--sidebar-width));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
