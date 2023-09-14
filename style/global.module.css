@@ -1,0 +1,84 @@
+/* ================ */
+/*       BODY       */
+/* ================ */
+
+.body {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) var(--main-width);
+  grid-template-rows: var(--header-height) var(--sidebar-height) var(--footer-height);
+}
+
+
+/* ================ */
+/*      HEADER      */
+/* ================ */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-base);
+  height: var(--header-height);
+  width: var(--header-width);
+  padding: var(--space-s) var(--space-base);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  background-color: var(--color-header);
+  color: var(--color-neutral-0);
+}
+
+
+/* ================ */
+/*     SIDEBAR      */
+/* ================ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-base);
+  height: var(--sidebar-height);
+  width: var(--sidebar-width);
+  padding: var(--space-xs) var(--space-s);
+  grid-column: 1;
+  grid-row: 2;
+  background-color: var(--color-sidebar);
+  color: var(--color-neutral-0);
+}
+
+
+/* ================ */
+/*       MAIN       */
+/* ================ */
+
+.main {
+  display: flex;
+  height: var(--main-height);
+  width: var(--main-width);
+  padding: var(--space-s) var(--space-base);
+  grid-column: 2;
+  grid-row: 2;
+  background-color: var(--color-body);
+  color: var(--color-neutral-8);
+}
+
+
+/* ================ */
+/*      FOOTER      */
+/* ================ */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--footer-height);
+  width: var(--footer-width);
+  padding: var(--space-s) var(--space-base);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  background-color: var(--color-footer);
+  color: var(--color-neutral-0);
+}
