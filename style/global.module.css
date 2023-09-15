@@ -49,6 +49,11 @@
   color: var(--color-neutral-0);
 }
 
+.header .logo {
+  font-size: var(--font-size-h5);
+  font-family: "Major Mono Display";
+}
+
 
 /* ================ */
 /*     SIDEBAR      */
