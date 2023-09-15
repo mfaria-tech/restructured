@@ -64,14 +64,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--space-base);
+  gap: var(--space-l);
   height: var(--sidebar-height);
   width: var(--sidebar-width);
-  padding: var(--space-xs) var(--space-s);
+  padding: var(--space-xl) var(--space-s);
   grid-column: 1;
   grid-row: 2;
   background-color: var(--color-sidebar);
   color: var(--color-neutral-0);
+}
+
+.sidebar > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-l);
+}
+
+.sidebar .icon {
+  font-size: var(--font-size-h5);
+  cursor: pointer;
+  border-radius: var(--border-radius-rounded);
+  padding: var(--space-xs);
+}
+
+.sidebar .icon:hover {
+  opacity: 0.9;
+  color: var(--color-blue);
+  background-color: var(--color-neutral-6);
+}
+
+.sidebar .icon:active {
+  opacity: 1;
 }
 
 
