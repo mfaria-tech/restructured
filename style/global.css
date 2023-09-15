@@ -18,18 +18,34 @@
   --color-neutral-7: #343a40;
   --color-neutral-8: #212529;
 
+  --color-blue: #ffb758;
+
   --color-header: var(--color-neutral-7);
   --color-body: var(--color-neutral-3);
   --color-sidebar: var(--color-neutral-5);
   --color-footer: var(--color-neutral-7);
 
   /* SIZE */
+  --border-radius-soft-1: 9px;
+  --border-radius-soft-2: 15px;
+  --border-radius-rounded: 100px;
+
   --space-xs: 6px;
   --space-s: 9px;
   --space-base: 15px;
+  --space-m: 21px;
+  --space-l: 27px;
+  --space-xl: 33px;
 
   --font-size-s: 12px;
-  --font-size-base: 15px;
+  --font-size-base: 14px;
+  --font-size-m: 18px;
+  --font-size-h6: 21px;
+  --font-size-h5: 27px;
+  --font-size-h4: 33px;
+  --font-size-h3: 39px;
+  --font-size-h2: 42px;
+  --font-size-h1: 45px;
 
   --header-height: 72px;
   --header-width: 100vw;
@@ -49,5 +65,31 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/* ================ */
+/*      FONTS       */
+/* ================ */
+
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(../public/assets/fonts/material_symbols_outlined.woff2);
+}
+
+@font-face {
+  font-family: "Major Mono Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/assets/fonts/major_mono_display.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(../public/assets/fonts/montserrat.ttf);
 }
