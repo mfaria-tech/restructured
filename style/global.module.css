@@ -1,4 +1,24 @@
 /* ================ */
+/*   PROPS & KEYS   */
+/* ================ */
+
+@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
+}
+@property --l {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 10px;
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 10deg;
+}
+
+/* ================ */
 /*       ICON       */
 /* ================ */
 
@@ -83,6 +103,9 @@
 }
 
 .sidebar .icon {
+  --p: 10%;
+  --l: 10px;
+  --a: 10deg;
   font-size: var(--font-size-h5);
   cursor: pointer;
   border-radius: var(--border-radius-rounded);
@@ -91,12 +114,17 @@
 
 .sidebar .icon:hover {
   opacity: 0.9;
-  color: var(--color-blue);
+  color: var(--color-orange);
   background-color: var(--color-neutral-6);
+  transition: --p 0.25s, --l 0.25s, --a 0.25s;
 }
 
 .sidebar .icon:active {
+  --p: 75%;
+  --l: 100px;
+  --a: 180deg;
   opacity: 1;
+  background: radial-gradient(circle, var(--color-neutral-5) var(--p), var(--color-neutral-6));
 }
 
 
@@ -127,6 +155,7 @@
   height: var(--footer-height);
   width: var(--footer-width);
   padding: var(--space-s) var(--space-base);
+  font-size: var(--font-size-base);
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 3;
