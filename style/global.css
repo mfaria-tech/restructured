@@ -18,7 +18,8 @@
   --color-neutral-7: #343a40;
   --color-neutral-8: #212529;
 
-  --color-blue: #ffb758;
+  --color-blue: ;
+  --color-orange: #ffb758;
 
   --color-header: var(--color-neutral-7);
   --color-body: var(--color-neutral-3);
@@ -50,7 +51,7 @@
   --header-height: 72px;
   --header-width: 100vw;
   
-  --footer-height: 45px;
+  --footer-height: 27px;
   --footer-width: 100vw;
 
   --sidebar-height: calc(100vh - var(--header-height) - var(--footer-height));
