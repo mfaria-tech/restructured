@@ -124,7 +124,7 @@
   --l: 100px;
   --a: 180deg;
   opacity: 1;
-  background: radial-gradient(circle, var(--color-neutral-5) var(--p), var(--color-neutral-6));
+  background: radial-gradient(circle, var(--color-neutral-7) var(--p), var(--color-neutral-5));
 }
 
 
