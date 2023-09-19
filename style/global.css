@@ -94,3 +94,11 @@ body {
   font-weight: 100 900;
   src: url(../public/assets/fonts/montserrat.ttf);
 }
+
+
+/* ================ */
+/*    GENERIC DIV   */
+/* ================ */
+
+div[is-open="true"] { visibility: visible; }
+div[is-open="false"] { visibility: hidden; }

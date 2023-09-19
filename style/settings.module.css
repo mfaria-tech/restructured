@@ -1,0 +1,20 @@
+/* ================ */
+/*     SETTINGS     */
+/* ================ */
+
+.settings {
+  width: 315px;
+  height: var(--sidebar-height);
+  background-color: var(--color-neutral-5);
+  margin-left: 5px;
+  transition-property: width, visibility, margin; 
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  z-index: 100;
+}
+
+.settings[is-open="false"] {
+  visibility: hidden;
+  margin: 0;
+  width: 0;
+}
