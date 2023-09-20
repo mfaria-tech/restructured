@@ -1,0 +1,54 @@
+/* ================ */
+/*      SET TAB     */
+/* ================ */
+
+.settab {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-s);
+  background-color: var(--color-neutral-7);
+  border: var(--border-size-m);
+  border-style: solid; 
+  border-radius: var(--border-radius-soft-1);
+  border-color: (--color-neutral-9);
+}
+
+.settab .form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  color: var(--color-neutral-0);
+}
+
+.settab .form > label {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.settab .form > button {
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding: var(--space-xs);
+}
+
+.settab .form > button::before {
+  content: "Aa";
+  font-size: var(--font-size-h1);
+}
+
+.settab .form > button[font-type="default"] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.settab .form > button[font-type="serif"] {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.settab .form > button[font-type="mono"] {
+  font-family: 'Courier New', Courier, monospace;
+}

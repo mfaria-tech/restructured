@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import styles from "../../style/settings.module.css"
+import SetTag from "./settag";
 
 export default function Settings() {
   const ref = useRef(null);
@@ -30,11 +31,8 @@ export default function Settings() {
   })
 
   return (
-    <div 
-      className={styles.settings}
-      is-open={open} 
-      ref={ref} >
-
+    <div className={styles.settings} is-open={open} ref={ref} >
+      <SetTag></SetTag>
     </div>
   )
 }

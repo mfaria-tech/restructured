@@ -6,6 +6,7 @@
   width: 315px;
   height: var(--sidebar-height);
   background-color: var(--color-neutral-5);
+  padding: var(--space-base);
   margin-left: 5px;
   transition-property: width, visibility, margin; 
   transition-duration: 0.25s;
