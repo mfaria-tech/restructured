@@ -27,6 +27,10 @@
   --color-footer: var(--color-neutral-7);
 
   /* SIZE */
+  --border-size-s: 1px;
+  --border-size-m: 2px;
+  --border-size-l: 3px;
+
   --border-radius-soft-1: 9px;
   --border-radius-soft-2: 15px;
   --border-radius-rounded: 100px;
@@ -59,6 +63,8 @@
 
   --main-height: var(--sidebar-height);
   --main-width: calc(100vw - var(--sidebar-width));
+
+  --settings-width: 315px;
 }
 
 * {
@@ -102,3 +108,68 @@ body {
 
 div[is-open="true"] { visibility: visible; }
 div[is-open="false"] { visibility: hidden; }
+
+/* ================ */
+/*    GENERIC BTN   */
+/* ================ */
+
+button {
+  cursor: pointer;
+  border-radius: var(--border-radius-soft-1);
+  border-width: var(--border-size-m);
+  border-style: solid;
+  border-color: var(--color-neutral-2);
+  background-color: var(--color-neutral-1);
+}
+
+/* ================ */
+/*   GENERIC TEXT   */
+/* ================ */
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+
+/* ================ */
+/*  GENERIC  INPUT  */
+/* ================ */
+
+input {
+  border-radius: var(--border-radius-rounded);
+  border: 0 solid transparent;
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+}
+
+input[type="color"] {
+  padding: 0;
+  width: 21px;
+  height: 25px;
+  background-color: transparent;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 3px;
+  border: 0 solid transparent;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border-radius: 3px;
+  border: 0 solid transparent;
+}
+
+/* ================ */
+/*  DEFAULT SCROLL  */
+/* ================ */
+
+::-webkit-scrollbar { width: var(--space-base); }
+::-webkit-scrollbar-track { background-color: var(--color-neutral-5); }
+::-webkit-scrollbar-thumb {
+  border: var(--border-size-l) solid var(--color-neutral-5);
+  border-radius: var(--border-radius-rounded);
+  background-color: var(--color-neutral-1);
+}

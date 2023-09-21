@@ -32,7 +32,26 @@ export default function Settings() {
 
   return (
     <div className={styles.settings} is-open={open} ref={ref} >
-      <SetTag></SetTag>
+      <details className={styles.card}>
+        <summary>Heading 1</summary>
+        <SetTag />
+      </details>
+      <details className={styles.card}>
+        <summary>Heading 2</summary>
+        <SetTag />
+      </details>
+      <details className={styles.card}>
+        <summary>Heading 3</summary>
+        <SetTag />
+      </details>
+      <details className={styles.card}>
+        <summary>Heading 4</summary>
+        <SetTag />
+      </details>
+      <details className={styles.card}>
+        <summary>Heading 5</summary>
+        <SetTag />
+      </details>
     </div>
   )
 }

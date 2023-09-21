@@ -3,12 +3,17 @@
 /* ================ */
 
 .settings {
-  width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  overflow: hidden;
+  overflow-y: scroll;
+  width: var(--settings-width);
   height: var(--sidebar-height);
   background-color: var(--color-neutral-5);
   padding: var(--space-base);
   margin-left: 5px;
-  transition-property: width, visibility, margin; 
+  transition-property: width, visibility, margin, padding; 
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
   z-index: 100;
@@ -17,5 +22,40 @@
 .settings[is-open="false"] {
   visibility: hidden;
   margin: 0;
+  padding-left: 0;
+  padding-right: 0;
   width: 0;
+}
+
+.settings .card { transition: 0.5s; }
+.settings .card summary {
+  font-size: var(--font-size-h5);
+  color: var(--color-neutral-2);
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .card summary::marker { content: none; }
+.settings .card summary::before,
+.settings .card summary::after {
+  content: "";
+  height: 0;
+  width: var(--space-base);
+  border-style: solid; 
+  border-bottom-color: var(--color-neutral-2); 
+  border-bottom-width: var(--border-size-s);
+  position: absolute;
+  right: 0;
+  top: calc(40% - 1px);
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+
+.settings .card summary::after {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.settings .card[open] summary::after {
+  transform: rotate(0deg);
 }
