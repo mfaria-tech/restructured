@@ -17,13 +17,22 @@
 .settab .form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  gap: var(--space-s);
   color: var(--color-neutral-0);
+  align-items: center;
 }
 
 .settab .form > label {
   grid-column-start: 1;
   grid-column-end: 4;
+}
+
+.settab .form > input {
+  height: 18px;
+}
+
+.settab .form > input[type="color"] {
+  height: 25px;
 }
 
 .settab .form > button {

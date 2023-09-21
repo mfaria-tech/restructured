@@ -7,11 +7,9 @@ export default function SetTag({ color, fontsize }: {
   return (
     <div className={styles.settab}>
       <div className={styles.form}>
-        <label>Icon:</label>
-      </div>
-      <div className={styles.form}>
         <label>Color:</label>
         <input type="color" value={color} />
+        <input autoComplete="off"/>
       </div>
       <div className={styles.form}>
         <label>Font:</label>
