@@ -59,3 +59,32 @@
 .settings .card[open] summary::after {
   transform: rotate(0deg);
 }
+
+.settings .options {
+  display: flex;
+  position: absolute;
+  gap: var(--space-xs);
+  margin-left: calc(var(--settings-width) - 123px);
+  margin-top: calc(var(--header-height) + 27px);
+  transform: rotateZ(90deg);
+  transition-property: all; 
+  transition-timing-function: ease-in-out;
+}
+
+.settings .options > span {
+  background-color: var(--color-neutral-5);
+  padding: var(--space-s);
+  border-top-right-radius: var(--border-radius-soft-1);
+  border-top-left-radius: var(--border-radius-soft-1);
+}
+
+.settings[is-open="true"] .options { transition-duration: 0.75s; }
+.settings[is-open="false"] .options {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  transition-duration: 0s;
+}
+
+.settings .options > span[is-selected="false"] { background-color: var(--color-neutral-4); }
+.settings .options > span[is-selected="true"] { background-color: var(--color-neutral-5); }

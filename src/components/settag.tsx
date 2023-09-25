@@ -11,12 +11,12 @@ export default function SetTag({ color, fontsize }: {
         <input type="color" value={color} />
         <input autoComplete="off"/>
       </div>
-      <div className={styles.form}>
+      {/* <div className={styles.form}>
         <label>Font:</label>
         <button font-type="default">Default</button>
         <button font-type="serif">Serif</button>
         <button font-type="mono">Mono</button>
-      </div>
+      </div> */}
       <div className={styles.form}>
         <label>Font-size:</label>
         <input autoComplete="off" value={fontsize} />
