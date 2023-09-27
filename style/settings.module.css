@@ -13,9 +13,9 @@
   background-color: var(--color-neutral-5);
   padding: var(--space-base);
   margin-left: 5px;
-  transition-property: width, visibility, margin, padding; 
+  /* transition-property: visibility; 
   transition-duration: 0.25s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
   z-index: 100;
 }
 
@@ -27,7 +27,11 @@
   width: 0;
 }
 
-.settings .card { transition: 0.5s; }
+.settings .card {
+  /* transition: 0.5s; */
+  margin-bottom: var(--space-m);
+}
+
 .settings .card summary {
   font-size: var(--font-size-h5);
   color: var(--color-neutral-2);
@@ -48,7 +52,7 @@
   right: 0;
   top: calc(40% - 1px);
   transform: translateY(-50%);
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 
 .settings .card summary::after {
@@ -63,12 +67,16 @@
 .settings .options {
   display: flex;
   position: absolute;
+  height: 0;
+  width: 0;
+  visibility: hidden;
   gap: var(--space-xs);
   margin-left: calc(var(--settings-width) - 123px);
   margin-top: calc(var(--header-height) + 27px);
   transform: rotateZ(90deg);
-  transition-property: all; 
+  /* transition-property: all; 
   transition-timing-function: ease-in-out;
+  transition-duration: 0.75s; */
 }
 
 .settings .options > span {
@@ -76,15 +84,27 @@
   padding: var(--space-s);
   border-top-right-radius: var(--border-radius-soft-1);
   border-top-left-radius: var(--border-radius-soft-1);
+  cursor: pointer;
 }
 
-.settings[is-open="true"] .options { transition-duration: 0.75s; }
-.settings[is-open="false"] .options {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-  transition-duration: 0s;
+.settings[is-open="false"] .options { transition-duration: 0s; }
+.settings[is-open="true"] .options {
+  visibility: visible;
+  height: auto;
+  width: auto;
 }
 
 .settings .options > span[is-selected="false"] { background-color: var(--color-neutral-4); }
 .settings .options > span[is-selected="true"] { background-color: var(--color-neutral-5); }
+
+.settings .options .tab {
+  overflow: hidden;
+  /* transition-property: all; 
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s; */
+}
+
+.settings .options .tab[is-selected="false"] {
+  height: 0;
+  visibility: hidden;
+}
