@@ -64,6 +64,38 @@
   transform: rotate(0deg);
 }
 
+.settings .card h1,
+.settings .card h2,
+.settings .card h3,
+.settings .card h4,
+.settings .card h5 {
+  margin-bottom: var(--space-s);
+}
+
+.settings .card .font {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-base);
+}
+
+.settings .card .font button {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-s);
+  cursor: pointer;
+}
+
+.settings .card .font button:hover {
+  opacity: .8;
+}
+
+.settings .card .font .default { font-family: Arial, Helvetica, sans-serif; }
+.settings .card .font .mono { font-family: 'Courier New', Courier, monospace; }
+.settings .card .font .serif { font-family: Georgia, Times, 'Times New Roman', serif; }
+
 .settings .options {
   display: flex;
   position: absolute;
@@ -104,7 +136,8 @@
   transition-duration: 0.5s; */
 }
 
-.settings .options .tab[is-selected="false"] {
+.settings .options .tab[is-selected="false"],
+.settings .tab[is-open="false"] {
   height: 0;
   visibility: hidden;
 }
