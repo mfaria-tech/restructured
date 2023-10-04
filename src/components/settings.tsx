@@ -93,6 +93,35 @@ export default function Settings() {
           </div>
         </div>
         <div className={styles.card}>
+          <h5>Styles</h5>
+          <div className={styles.styles}>
+            <div className={styles.input}>
+              <label>Bold:</label>
+              <span>
+                \&#123;
+                <input />
+                &#125;
+              </span>
+            </div>
+            <div className={styles.input}>
+              <label>Italic:</label>
+              <span>
+                \&#123;
+                <input />
+                &#125;
+              </span>
+            </div>
+            <div className={styles.input}>
+              <label>Underlined:</label>
+              <span>
+                \&#123;
+                <input />
+                &#125;
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className={styles.card}>
 
         </div>
       </div>
@@ -120,7 +149,9 @@ export default function Settings() {
         </details>
       </div>
       <div className={styles.tab}
-        tab-name="icons" is-open={settings.options.icons} ></div>
+        tab-name="icons" is-open={settings.options.icons} >
+      
+      </div>
     </div>
   )
 }

@@ -31,6 +31,7 @@
   --border-size-m: 2px;
   --border-size-l: 3px;
 
+  --border-radius-soft-0: 5px;
   --border-radius-soft-1: 9px;
   --border-radius-soft-2: 15px;
   --border-radius-rounded: 100px;
@@ -42,6 +43,7 @@
   --space-l: 27px;
   --space-xl: 33px;
 
+  --font-size-xs: 10px;
   --font-size-s: 12px;
   --font-size-base: 14px;
   --font-size-m: 18px;

@@ -129,8 +129,11 @@
 .settings .options > span[is-selected="false"] { background-color: var(--color-neutral-4); }
 .settings .options > span[is-selected="true"] { background-color: var(--color-neutral-5); }
 
-.settings .options .tab {
+.settings .tab {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  gap: var(--space-base);
   /* transition-property: all; 
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s; */
@@ -140,4 +143,28 @@
 .settings .tab[is-open="false"] {
   height: 0;
   visibility: hidden;
+}
+
+.settings .tab .styles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.settings .tab .styles .input {
+  display: flex;
+  gap: var(--space-s);
+  justify-content: space-between;
+  align-items: center;
+  border: var(--border-size-m) solid var(--color-neutral-8);
+  border-radius: var(--border-radius-soft-0);
+  background-color: var(--color-neutral-7);
+  color: var(--color-neutral-1);
+  padding: var(--space-xs);
+}
+
+.settings .tab .styles input {
+  width: 72px;
+  border-radius: var(--border-radius-soft-0);
+  margin: 0 var(--space-s);
 }
