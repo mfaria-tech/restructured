@@ -1,5 +1,11 @@
 import styles from "../../style/settab.module.css"
 
+/**
+ * 
+ * @param color: string --> set default value for color
+ * @param fontsize: string --> set default value for font-size
+ * @returns SetTag element 
+ */
 export default function SetTag({ color, fontsize }: {
   color?: string,
   fontsize?: string

@@ -2,6 +2,11 @@ import React, { useState, useRef, useEffect } from "react"
 import styles from "../../style/settings.module.css"
 import SetTag from "./settag";
 
+
+/**
+ * 
+ * @returns Settings element
+ */
 export default function Settings() {
   const ref = useRef(null);
   const [ open, setOpen] = useState("false");
@@ -17,6 +22,11 @@ export default function Settings() {
     },
   });
 
+
+  /**
+   * 
+   * @param obj: any --> extend and update object
+   */
   function updateSettings(obj: any) {
     setSettings((settings) => ({
       ...settings,
@@ -24,10 +34,20 @@ export default function Settings() {
     }));
   };
 
+
+  /**
+   * 
+   * @param e: any --> receive element from reference
+   */
   function displaySettings(e: any) {
     setOpen(e.detail.open ? "true" : "false")
   }
 
+
+  /**
+   * 
+   * @param id: string
+   */
   function activeTab(id: string) {
     Object.keys(settings.options)
       .forEach((el) => { settings.options[el] = "false" });
@@ -35,9 +55,15 @@ export default function Settings() {
     updateSettings(settings);
   }
 
+
+  /**
+   * 
+   * @param id: string
+   */
   function buttonFont(id: Number) {
 
   }
+
   
   useEffect(() => {
     localStorage.getItem("settings");
@@ -56,6 +82,7 @@ export default function Settings() {
       window.removeEventListener("onClickTune", displaySettings)
     }
   })
+
 
   return (
     <div className={styles.settings} is-open={open} ref={ref} >

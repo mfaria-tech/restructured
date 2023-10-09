@@ -2,8 +2,13 @@ import styles from "../../style/global.module.css"
 import Icon from "./icon"
 import React, { useState } from "react"
 
+/**
+ * 
+ * @returns Sidebar element
+ */
 export default function Sidebar() {
   const [ displayTune, setTune ] = useState(false)
+
 
   function OnClickTune() {
     setTune(!displayTune) 
@@ -13,6 +18,7 @@ export default function Sidebar() {
     window.dispatchEvent(evClickTune);
   }
   
+
   return (
     <aside className={styles.sidebar}>
       <>

@@ -3,6 +3,11 @@ import Header from "./header"
 import Sidebar from "./sidebar"
 import Footer from "./footer"
 
+/**
+ * 
+ * @param children: any --> Extend DOM 
+ * @returns Layout element
+ */
 export default function Layout({ children }) {
   return (
     <div className={styles.body}>
