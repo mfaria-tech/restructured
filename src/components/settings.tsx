@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect, ChangeEventHandler } from "react"
 import styles from "../../style/settings.module.css"
 import SetTag from "./settag";
 
@@ -15,10 +15,15 @@ export default function Settings() {
     "options": {
       "global": "true",
       "elements": "false",
-      "icons": "false",
+      // "icons": "false",
     },
     "global": {
       "font-family": "default",
+      "font-style": {
+        "bold": "b",
+        "italic": "i",
+        "undelined": "u",
+      },
     },
   });
 
@@ -58,10 +63,32 @@ export default function Settings() {
 
   /**
    * 
-   * @param id: string
+   * @param id: Number
    */
   function buttonFont(id: Number) {
+    switch (id) {
+      case 0:
+        settings.global["font-family"] = "default";
+        updateSettings(settings);
+        break;
+    
+      case 1:
+        settings.global["font-family"] = "mono";
+        updateSettings(settings);
+        break;
+      
+      case 2:
+        settings.global["font-family"] = "serif";
+        updateSettings(settings);
+        break;
+    }
+  }
 
+  function onChangeInput(ev: any) {
+    const input = ev.target;
+    console.log(input);
+
+    
   }
 
   
@@ -95,25 +122,31 @@ export default function Settings() {
           onClick={() => activeTab("elements")} >
           Elements
         </span>
-        <span is-selected={settings.options.icons} 
+        {/* <span is-selected={settings.options.icons} 
           onClick={() => activeTab("icons")} >
           Icons
-        </span>
+        </span> */}
       </div>
       <div className={styles.tab} 
         tab-name="global" is-open={settings.options.global} >  
         <div className={styles.card}>
           <h5>Font Default:</h5>
           <div className={styles.font}>
-            <button className={styles.default} onClick={() => buttonFont(0)}>
+            <button className={styles.default} 
+              onClick={() => buttonFont(0)} 
+              is-selected={settings.global["font-family"] === "default" ? "true" : "false"}>
               <h4>Aa</h4>
               <span>Default</span>
             </button>
-            <button className={styles.mono} onClick={() => buttonFont(1)}>
+            <button className={styles.mono} 
+              onClick={() => buttonFont(1)} 
+              is-selected={settings.global["font-family"] === "mono" ? "true" : "false"}>
               <h4>Aa</h4>
               <span>Mono</span>
             </button>
-            <button className={styles.serif} onClick={() => buttonFont(2)}>
+            <button className={styles.serif} 
+              onClick={() => buttonFont(2)} 
+              is-selected={settings.global["font-family"] === "serif" ? "true" : "false"}>
               <h4>Aa</h4>
               <span>Serif</span>
             </button>
@@ -125,24 +158,39 @@ export default function Settings() {
             <div className={styles.input}>
               <label>Bold:</label>
               <span>
-                \&#123;
-                <input />
+                \
+                <input 
+                  id="inputBold"
+                  onChange={onChangeInput} 
+                  maxLength={6}
+                  defaultValue={settings.global["font-style"]["bold"]} />
+                &#123;
                 &#125;
               </span>
             </div>
             <div className={styles.input}>
               <label>Italic:</label>
               <span>
-                \&#123;
-                <input />
+                \
+                <input 
+                  id="inputItalic"
+                  onChange={onChangeInput} 
+                  maxLength={6}
+                  defaultValue={settings.global["font-style"]["italic"]} />
+                &#123;
                 &#125;
               </span>
             </div>
             <div className={styles.input}>
               <label>Underlined:</label>
               <span>
-                \&#123;
-                <input />
+                \
+                <input 
+                  id="inputUnderlined"
+                  onChange={onChangeInput} 
+                  maxLength={6}
+                  defaultValue={settings.global["font-style"]["undelined"]} />
+                &#123;
                 &#125;
               </span>
             </div>
@@ -175,10 +223,10 @@ export default function Settings() {
           <SetTag />
         </details>
       </div>
-      <div className={styles.tab}
+      {/* <div className={styles.tab}
         tab-name="icons" is-open={settings.options.icons} >
       
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -96,6 +96,11 @@
 .settings .card .font .mono { font-family: 'Courier New', Courier, monospace; }
 .settings .card .font .serif { font-family: Georgia, Times, 'Times New Roman', serif; }
 
+.settings .card .font [is-selected="true"] {
+  background-color: var(--color-blue-light);
+  border-color: var(--color-blue);
+}
+
 .settings .options {
   display: flex;
   position: absolute;
@@ -103,8 +108,8 @@
   width: 0;
   visibility: hidden;
   gap: var(--space-xs);
-  margin-left: calc(var(--settings-width) - 123px);
-  margin-top: calc(var(--header-height) + 27px);
+  margin-left: calc(var(--settings-width) - 87px);
+  margin-top: calc(var(--header-height) - 10px);
   transform: rotateZ(90deg);
   /* transition-property: all; 
   transition-timing-function: ease-in-out;
@@ -167,4 +172,8 @@
   width: 72px;
   border-radius: var(--border-radius-soft-0);
   margin: 0 var(--space-s);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: var(--color-orange);
+  background-color: var(--color-neutral-7);
 }
