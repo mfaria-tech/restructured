@@ -18,8 +18,12 @@
   --color-neutral-7: #343a40;
   --color-neutral-8: #212529;
 
-  --color-blue: ;
-  --color-orange: #ffb758;
+  --color-blue-light: #78bef7;
+  --color-blue: #2794ec;
+  --color-blue-dark: #1571bd;
+  --color-orange-light: #fad58f;
+  --color-orange: #ffb52d;
+  --color-orange-dark: #d18f13;
 
   --color-header: var(--color-neutral-7);
   --color-body: var(--color-neutral-3);
